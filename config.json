@@ -1,0 +1,30 @@
+{
+    "name": "Modify Contact Admin Button",
+    "namespace": "Modify_Contact_Admin_Button\\ExternalModule",
+    "description": "ToDo",
+    "permissions": [
+        "redcap_every_page_top"
+    ],
+    "authors": [
+        {
+            "name": "Marly Cormar",
+            "email": "marlycormar@ufl.edu",
+            "institution": "CTS-IT - University of Florida"
+        },
+        {
+            "name": "Tiago Bember",
+            "email": "tbembersimeao@ufl.edu",
+            "institution": "CTS-IT - University of Florida"
+        },
+        {
+            "name": "Andy Martin",
+            "email": "",
+            "institution": "Stanford University"
+        },
+        {
+            "name": "Philip B. Chase",
+            "email": "pbc@ufl.edu",
+            "institution": "CTS-IT - University of Florida"
+        }
+    ]
+}
