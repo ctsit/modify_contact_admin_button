@@ -5,7 +5,9 @@ $('document').ready(function() {
         var button = searchResults[0];
         var username = document.getElementById('username-reference').textContent
 
-        button.href = 'https://redcap.ctsi.ufl.edu/redtracs/surveys/?s=J7T3LCRTDC&gatorlink='
+        var survey_url = 'https://redcap.ctsi.ufl.edu/redtracs/surveys/?s=J7T3LCRTDC';
+
+        button.href = survey_url + '&gatorlink='
             + username + '&project_id' + project_id
             + '&redcap_username=' + username
             + '&registered_in_redcap=1'
