@@ -1,7 +1,7 @@
 {
     "name": "Modify Contact Admin Button",
     "namespace": "Modify_Contact_Admin_Button\\ExternalModule",
-    "description": "ToDo",
+    "description": "Modify the behavior of the 'Contact REDCap Administrator' button by redirecting the user to a configurable url. The url should be provided as part of the external module configuration.",
     "permissions": [
         "redcap_every_page_top"
     ],
@@ -9,22 +9,31 @@
         {
             "name": "Marly Cormar",
             "email": "marlycormar@ufl.edu",
-            "institution": "CTS-IT - University of Florida"
+            "institution": "University of Florida - CTSI"
         },
         {
             "name": "Tiago Bember",
             "email": "tbembersimeao@ufl.edu",
-            "institution": "CTS-IT - University of Florida"
+            "institution": "University of Florida - CTSI"
         },
+        ,
         {
-            "name": "Andy Martin",
-            "email": "",
-            "institution": "Stanford University"
-        },
+            "name": "Dileep Rajput",
+            "email": "rajputd@ufl.edu",
+            "institution": "University of Florida - CTSI"
+        }
         {
             "name": "Philip B. Chase",
             "email": "pbc@ufl.edu",
-            "institution": "CTS-IT - University of Florida"
+            "institution": "University of Florida - CTSI"
+        }
+    ],
+    "project-settings": [
+        {
+            "key": "contact-admin-button-url-key",
+            "name": "Target URL",
+            "required": true,
+            "type": "text"
         }
     ]
 }
