@@ -24,7 +24,7 @@ class ExternalModule extends AbstractExternalModule {
             
             global $user_firstname, $user_lastname, $user_email, $username, $Proj;
             
-            $url = $this->getProjectSetting('contact-admin-button-url-key');
+            $url = $this->getSystemSetting('contact-admin-button-url-key');
             
             $settings = [
                     "url" => $url,

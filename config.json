@@ -27,7 +27,7 @@
             "institution": "University of Florida - CTSI"
         }
     ],
-    "project-settings": [
+    "system-settings": [
         {
             "key": "contact-admin-button-url-key",
             "name": "Target URL",
