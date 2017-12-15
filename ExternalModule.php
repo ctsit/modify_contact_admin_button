@@ -25,7 +25,17 @@ class ExternalModule extends AbstractExternalModule {
             global $user_firstname, $user_lastname, $user_email, $username, $Proj;
             
             $url = $this->getProjectSetting('contact-admin-button-url-key');
-            $this->sendVarToJS('contactAdminButtonURL', $url);
+            
+            $settings = [
+                    "url" => $url,
+                    "user_firstname"=> $user_firstname,
+                    "user_lastname" => $user_lastname,
+                    "user_email" => $user_email,
+                    "project_id" => $project_id,
+                    "username" => $username,
+            ];
+            
+            $this->sendVarToJS('contactAdminButtonSettings', $settings);
             
             // If the user entered a url, change the 'Contact REDCap administrator' button href.
             if($url){
@@ -35,7 +45,7 @@ class ExternalModule extends AbstractExternalModule {
         
         return;
     }
-
+    
     /**
      * Includes a local JS file.
      *
