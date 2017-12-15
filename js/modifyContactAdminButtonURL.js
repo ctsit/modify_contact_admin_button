@@ -12,6 +12,6 @@ $('document').ready(function() {
                 + '&registered_in_redcap=1'
                 + '&first_name=' + contactAdminButtonSettings.user_firstname
                 + '&last_name=' + contactAdminButtonSettings.user_lastname
-                + '&email=' + contactAdminButtonSettings.user_email
+                + '&email=' + contactAdminButtonSettings.email
         }
 });
