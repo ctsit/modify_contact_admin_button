@@ -7,8 +7,9 @@ $('document').ready(function() {
 
         var survey_url = 'https://redcap.ctsi.ufl.edu/redtracs/surveys/?s=J7T3LCRTDC';
 
-        button.href = survey_url + '&gatorlink='
-            + username + '&project_id' + project_id
+        button.href = survey_url 
+	    + '&gatorlink=' + username 
+	    + '&project_id=' + project_id
             + '&redcap_username=' + username
             + '&registered_in_redcap=1'
             + '&first_name=' + user_firstname
