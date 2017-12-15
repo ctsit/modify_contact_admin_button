@@ -30,7 +30,7 @@ class ExternalModule extends AbstractExternalModule {
                     "url" => $url,
                     "user_firstname"=> $user_firstname,
                     "user_lastname" => $user_lastname,
-                    "user_email" => $user_email,
+                    "email" => $user_email,
                     "project_id" => $project_id,
                     "username" => $username,
             ];
