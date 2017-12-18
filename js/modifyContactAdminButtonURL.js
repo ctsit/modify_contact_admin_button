@@ -3,8 +3,6 @@ $('document').ready(function() {
 
         if(searchResults.length === 1) {
             var button = searchResults[0];
-            var username = document.getElementById('username-reference').textContent
-            
             var length = contactAdminButtonValuePairs.length;
             button.href = contactAdminButtonURL;
             button.href += '&registered_in_redcap=1'
