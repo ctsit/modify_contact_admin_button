@@ -41,13 +41,13 @@
         },
         {
             "key": "contact-admin-button-parameters-list-key",
-            "name": "URL parameter name and value pairs",
+            "name": "URL parameter name-value pairs",
             "type": "sub_settings",
             "repeatable": "true",
             "sub_settings": [
                 {
                     "key": "contact-admin-button-parameter-name",
-                    "name": "Parameter",
+                    "name": "Name",
                     "type": "text"
                 },
                 {
