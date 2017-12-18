@@ -21,7 +21,7 @@ The following values may be selected to be appended to the URL:
     project_id
     username
 
-For example, using the configuration below
+For example, using the configuration below:
 
 ![Example Configuration](example_configuration.png)
 
@@ -30,5 +30,5 @@ the rewritten target URL might look like this:
 
     https://redcap.example.org/surveys/?s=DUPrXGmx3L&registered_in_redcap=1&gatorlink=jdoe&project_id=14&redcap_username=jdoe
 
-To use the appended parameters, match the names shown above to the name the fields in the target REDCap survey.
+To use the appended parameters, make sure the parameter names you chose coincide with the names of the fields in the target REDCap survey.
 
