@@ -33,6 +33,37 @@
             "name": "Target URL",
             "required": true,
             "type": "text"
+        },
+        {
+            "key": "contact-admin-button-descriptive-text",
+            "name": "Please make sure you provide both a parameter name and a value. If one of the two is left blank, the url will not contain such parameter name/value.",
+            "type": "descriptive"
+        },
+        {
+            "key": "contact-admin-button-parameters-list-key",
+            "name": "URL parameter name and value pairs",
+            "type": "sub_settings",
+            "repeatable": "true",
+            "sub_settings": [
+                {
+                    "key": "contact-admin-button-parameter-name",
+                    "name": "Parameter",
+                    "type": "text"
+                },
+                {
+                    "key": "contact-admin-button-parameter-value",
+                    "name": "Value",
+                    "type": "dropdown",
+                    "choices":
+                    [
+                        {"value": "user_firstname", "name": "user_firstname"},
+                        {"value": "user_lastname", "name": "user_lastname"},
+                        {"value": "email", "name": "email"},
+                        {"value": "project_id", "name": "project_id"},
+                        {"value": "username", "name": "username"}
+                    ]
+                }
+            ]
         }
     ]
 }
