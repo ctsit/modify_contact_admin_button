@@ -36,7 +36,7 @@
         },
         {
             "key": "contact-admin-button-descriptive-text",
-            "name": "Please make sure you provide both a parameter name and a value. If one of the two is left blank, the url will not contain such parameter name/value.",
+            "name": "Please make sure you provide both a parameter name and a value.",
             "type": "descriptive"
         },
         {
