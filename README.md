@@ -28,7 +28,7 @@ For example, using the configuration below:
 
 the rewritten target URL might look like this:
 
-    https://redcap.example.org/surveys/?s=DUPrXGmx3L&registered_in_redcap=1&gatorlink=jdoe&project_id=14&redcap_username=jdoe
+    https://redcap.example.org/surveys/?s=DUPrXGmx3L&gatorlink=jdoe&project_id=14&redcap_username=jdoe
 
 To use the appended parameters, make sure the parameter names you chose coincide with the names of the fields in the target REDCap survey.
 
