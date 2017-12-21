@@ -58,7 +58,7 @@
                     [
                         {"value": "user_firstname", "name": "user_firstname"},
                         {"value": "user_lastname", "name": "user_lastname"},
-                        {"value": "email", "name": "email"},
+                        {"value": "user_email", "name": "user_email"},
                         {"value": "project_id", "name": "project_id"},
                         {"value": "username", "name": "username"}
                     ]
