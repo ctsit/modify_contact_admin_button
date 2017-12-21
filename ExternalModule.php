@@ -37,18 +37,14 @@ class ExternalModule extends AbstractExternalModule {
                     "username" => $username,
             ];
 
-            $value_pairs = array();
-
             for($i = 0; $i < $length; $i++){
                 if ($parameter_names[$i] and $parameter_values[$i]){
-                    array_push($value_pairs,
-                        array("name" => filter_var($parameter_names[$i],FILTER_SANITIZE_URL),
-                        "value" => $settings[$parameter_values[$i]]));
+                    $url .= '&' . filter_var($parameter_names[$i],FILTER_SANITIZE_URL) . 
+                    '=' . $settings[$parameter_values[$i]];
                 }
             }
 
             $this->sendVarToJS('contactAdminButtonURL', $url);
-            $this->sendVarToJS('contactAdminButtonValuePairs', $value_pairs);
             
             // If the user entered a url, change the 'Contact REDCap administrator' button href.
             if($url){
