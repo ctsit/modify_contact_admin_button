@@ -5,7 +5,6 @@ $('document').ready(function() {
             var button = searchResults[0];
             var length = contactAdminButtonValuePairs.length;
             button.href = contactAdminButtonURL;
-            button.href += '&registered_in_redcap=1'
 
             for(var i in contactAdminButtonValuePairs){
                  button.href += '&' + contactAdminButtonValuePairs[i].name;
