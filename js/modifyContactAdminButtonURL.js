@@ -3,12 +3,6 @@ $('document').ready(function() {
 
         if(searchResults.length === 1) {
             var button = searchResults[0];
-            var length = contactAdminButtonValuePairs.length;
             button.href = contactAdminButtonURL;
-
-            for(var i in contactAdminButtonValuePairs){
-                 button.href += '&' + contactAdminButtonValuePairs[i].name;
-                 button.href += '=' + contactAdminButtonValuePairs[i].value;
-            }
         }
 });
