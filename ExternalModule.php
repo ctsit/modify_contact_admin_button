@@ -32,7 +32,7 @@ class ExternalModule extends AbstractExternalModule {
             $settings = [
                     "user_firstname"=> $user_firstname,
                     "user_lastname" => $user_lastname,
-                    "email" => $user_email,
+                    "user_email" => $user_email,
                     "project_id" => $project_id,
                     "username" => $username,
             ];
