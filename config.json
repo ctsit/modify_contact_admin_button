@@ -30,7 +30,7 @@
     "system-settings": [
         {
             "key": "contact-admin-button-url-key",
-            "name": "Target URL",
+            "name": "Base URL",
             "required": true,
             "type": "text"
         },
