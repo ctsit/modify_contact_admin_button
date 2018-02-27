@@ -34,7 +34,7 @@ class ExternalModule extends AbstractExternalModule {
                     "user_lastname" => $user_lastname,
                     "user_email" => $user_email,
                     "project_id" => $project_id,
-                    "username" => USERID,
+                    "USERID" => USERID,
             ];
 
             for($i = 0; $i < $length; $i++){
