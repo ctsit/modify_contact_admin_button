@@ -25,6 +25,11 @@
             "name": "Philip B. Chase",
             "email": "pbc@ufl.edu",
             "institution": "University of Florida - CTSI"
+        },
+        {
+            "name": "Taryn Stoffs",
+            "email": "tls@ufl.edu",
+            "institution": "University of Florida - CTSI"
         }
     ],
     "system-settings": [
@@ -60,10 +65,14 @@
                         {"value": "user_lastname", "name": "user_lastname"},
                         {"value": "user_email", "name": "user_email"},
                         {"value": "project_id", "name": "project_id"},
-                        {"value": "username", "name": "username"}
+                        {"value": "USERID", "name": "USERID"}
                     ]
                 }
             ]
         }
-    ]
+    ],
+    "compatibility": {
+        "redcap-version-min": "8.0.3",
+        "redcap-version-max": ""
+   }
 }

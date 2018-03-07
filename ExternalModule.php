@@ -22,7 +22,7 @@ class ExternalModule extends AbstractExternalModule {
 
         if($project_id) {
 
-            global $user_firstname, $user_lastname, $user_email, $username, $Proj;
+            global $user_firstname, $user_lastname, $user_email, $Proj;
 
             $length = sizeof($this->getSystemSetting('contact-admin-button-parameters-list-key'));
             $parameter_names = $this->getSystemSetting('contact-admin-button-parameter-name');
@@ -34,7 +34,7 @@ class ExternalModule extends AbstractExternalModule {
                     "user_lastname" => $user_lastname,
                     "user_email" => $user_email,
                     "project_id" => $project_id,
-                    "username" => $username,
+                    "USERID" => USERID,
             ];
 
             for($i = 0; $i < $length; $i++){
