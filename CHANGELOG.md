@@ -2,6 +2,14 @@
 All notable changes to the Modify Contact Admin Button project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.1] - 2018-03-08
+### Changed
+- Update minimum redcap version number (Marly)
+- Replace broken username field with USERID (Marly)
+
+### Added
+- Add Taryn as an author (Marly)
+
 
 ## [2.0.0] - 2018-01-04
 ### Removed
