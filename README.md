@@ -19,7 +19,9 @@ The following values may be selected to be appended to the URL:
     user_lastname
     email
     project_id
-    username
+    USERID
+
+The `USERID` field contains the redcap username.
 
 For example, using the configuration below:
 
