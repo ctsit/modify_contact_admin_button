@@ -2,6 +2,11 @@
 All notable changes to the Modify Contact Admin Button project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.3] - 2019-04-10
+### Changed
+- Open url in a new tab. (Marly Cormar)
+
+
 ## [2.0.2] - 2018-11-08
 ### Changed
 - Fix button selector to support newer REDCap versions. (Tiago)
