@@ -30,7 +30,9 @@ class ExternalModule extends AbstractExternalModule {
             $url = "";
             $label = "";
             $same_tab = false;
-            $hide = false;
+            $remove_suggest_link = $this->getProjectSetting('contact-admin-button-remove-suggest-new-feature-project');
+            $hide = $this->getProjectSetting('contact-admin-button-hide-project');
+
             if($this->getProjectSetting('contact-admin-button-override-project')) {
                 // Use project overrides.
                 $url = $this->getProjectSetting('contact-admin-button-url-key-project');
@@ -39,7 +41,6 @@ class ExternalModule extends AbstractExternalModule {
                 $parameter_values = $this->getProjectSetting('contact-admin-button-parameter-value-project');
                 $label = $this->getProjectSetting('contact-admin-button-label-project');
                 $same_tab = $this->getProjectSetting('contact-admin-button-sametab-project');
-                $hide = $this->getProjectSetting('contact-admin-button-hide-project');
             }
             if (!strlen($url)) {
                 $url = $this->getSystemSetting('contact-admin-button-url-key');
@@ -73,6 +74,7 @@ class ExternalModule extends AbstractExternalModule {
                 "label" => strlen($label) ? str_ireplace("<script", "&lt;script", $label) : "",
                 "sameTab" => $same_tab,
                 "hide" => $hide,
+                "removeSuggest" => $remove_suggest_link,
             );
             $this->sendVarToJS('contactAdminButtonSettings', $contactAdminButtonSettings);
             $this->includeJs('js/modifyContactAdminButtonURL.js');
