@@ -69,7 +69,7 @@ class ExternalModule extends AbstractExternalModule {
 
             // Send data to JavaScript.
             $contactAdminButtonSettings = array (
-                "url" => $url,
+                "url" => strlen($url) ? $url : "",
                 "label" => strlen($label) ? str_ireplace("<script", "&lt;script", $label) : "",
                 "sameTab" => $same_tab,
                 "hide" => $hide,
