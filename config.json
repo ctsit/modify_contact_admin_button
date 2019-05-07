@@ -83,13 +83,18 @@
     ],
     "project-settings": [
         {
-            "key": "contact-admin-button-override-project",
-            "name": "Override system settings:<br>Check this to override the system settings. When any settings are left blank, the system settings will be used",
+            "key": "contact-admin-button-remove-suggest-new-feature-project",
+            "name": "Remove the 'Suggest a New Feature' link",
             "type": "checkbox"
         },
         {
             "key": "contact-admin-button-hide-project",
             "name": "Hide the 'Contact REDCap admin' button entirely",
+            "type": "checkbox"
+        },
+        {
+            "key": "contact-admin-button-override-project",
+            "name": "Override system settings:<br>Check this to override the system settings. When any settings are left blank, the system settings will be used",
             "type": "checkbox"
         },
         {
