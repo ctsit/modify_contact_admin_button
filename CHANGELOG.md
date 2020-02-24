@@ -3,11 +3,17 @@
 All notable changes to the Modify Contact Admin Button project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [2.1.0] - 2019-05-08
+## [2.1.0] - 2020-02-24
+### Changed
+- Remove old authors from config.json and update description (Philip Chase)
+- Update description in README and fix min RC version (Philip Chase)
+
 ### Added
+- Add AUTHORS file (Philip Chase)
 - Possiblity to override settings on the project level. (GR)
 - Choice to open link in a new tab or not. (GR)
 - Option to change the label of the contact button. (GR)
+
 
 ## [2.0.3] - 2019-04-10
 ### Changed

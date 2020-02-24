@@ -1,27 +1,12 @@
 {
     "name": "Modify Contact Admin Button",
     "namespace": "Modify_Contact_Admin_Button\\ExternalModule",
-    "description": "Modify the behavior of the 'Contact REDCap Administrator' button by redirecting the user to a configurable url. The url should be provided as part of the external module configuration. See the complete <b><a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>documentation</a></b> at <a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>https://github.com/ctsit/modify_contact_admin_button</a>.",
+    "description": "Modify the behavior of the 'Contact REDCap Administrator' button by redirecting the user to a configurable url. The REDCap admin can set this URL in the external module configuration. See the complete <b><a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>documentation</a></b> at <a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>https://github.com/ctsit/modify_contact_admin_button</a>.",
     "permissions": [
         "redcap_every_page_top",
         "redcap_module_configure_button_display"
     ],
     "authors": [
-        {
-            "name": "Marly Cormar",
-            "email": "marlycormar@ufl.edu",
-            "institution": "University of Florida - CTSI"
-        },
-        {
-            "name": "Tiago Bember",
-            "email": "tbembersimeao@ufl.edu",
-            "institution": "University of Florida - CTSI"
-        },
-        {
-            "name": "Dileep Rajput",
-            "email": "rajputd@ufl.edu",
-            "institution": "University of Florida - CTSI"
-        },
         {
             "name": "Philip B. Chase",
             "email": "pbc@ufl.edu",

@@ -1,10 +1,12 @@
 # REDCap External Module: Modify Contact Admin Button
 
-Modify the behavior of the 'Contact REDCap Administrator' button by redirecting the user to a configurable url. The url should be provided as part of the external module configuration. A series of parameters may be added to the URL to make details about the current REDCap user and project available to the target form.
+[![DOI](https://zenodo.org/badge/114378066.svg)](https://zenodo.org/badge/latestdoi/114378066)
+
+Modify Contact Admin Button changes the behavior of REDCap's 'Contact REDCap Administrator' button by redirecting the user to a configurable URL. The REDCap admin can set this URL in the external module configuration. The admin can add a series of parameters to the URL to make details about the current REDCap user and project available to the target form.
 
 ## Prerequisites
 
-- REDCap >= 8.0.0 (for versions < 8.0.0, [REDCap Modules](https://github.com/vanderbilt/redcap-external-modules) is required).
+- REDCap >= 8.0.3 (for versions < 8.0.3, [REDCap Modules](https://github.com/vanderbilt/redcap-external-modules) is required).
 
 ## Installation
 
