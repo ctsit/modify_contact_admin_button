@@ -1,26 +1,12 @@
 {
     "name": "Modify Contact Admin Button",
     "namespace": "Modify_Contact_Admin_Button\\ExternalModule",
-    "description": "Modify the behavior of the 'Contact REDCap Administrator' button by redirecting the user to a configurable url. The url should be provided as part of the external module configuration. See the complete <b><a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>documentation</a></b> at <a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>https://github.com/ctsit/modify_contact_admin_button</a>.",
+    "description": "Modify the behavior of the 'Contact REDCap Administrator' button by redirecting the user to a configurable url. The REDCap admin can set this URL in the external module configuration. See the complete <b><a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>documentation</a></b> at <a href='https://github.com/ctsit/modify_contact_admin_button' target='_blank'>https://github.com/ctsit/modify_contact_admin_button</a>.",
     "permissions": [
-        "redcap_every_page_top"
+        "redcap_every_page_top",
+        "redcap_module_configure_button_display"
     ],
     "authors": [
-        {
-            "name": "Marly Cormar",
-            "email": "marlycormar@ufl.edu",
-            "institution": "University of Florida - CTSI"
-        },
-        {
-            "name": "Tiago Bember",
-            "email": "tbembersimeao@ufl.edu",
-            "institution": "University of Florida - CTSI"
-        },
-        {
-            "name": "Dileep Rajput",
-            "email": "rajputd@ufl.edu",
-            "institution": "University of Florida - CTSI"
-        },
         {
             "name": "Philip B. Chase",
             "email": "pbc@ufl.edu",
@@ -30,13 +16,22 @@
             "name": "Taryn Stoffs",
             "email": "tls@ufl.edu",
             "institution": "University of Florida - CTSI"
+        },
+        {
+            "name": "Günther Rezniczek",
+            "email": "guenther.rezniczek@rub.de",
+            "institution": "Ruhr-Universität Bochum, Marien Hospital Herne"
         }
     ],
     "system-settings": [
         {
             "key": "contact-admin-button-url-key",
             "name": "Base URL",
-            "required": true,
+            "type": "text"
+        },
+        {
+            "key": "contact-admin-button-label",
+            "name": "Button label (leave blank for default)",
             "type": "text"
         },
         {
@@ -57,6 +52,69 @@
                 },
                 {
                     "key": "contact-admin-button-parameter-value",
+                    "name": "Value",
+                    "type": "dropdown",
+                    "choices":
+                    [
+                        {"value": "user_firstname", "name": "user_firstname"},
+                        {"value": "user_lastname", "name": "user_lastname"},
+                        {"value": "user_email", "name": "user_email"},
+                        {"value": "project_id", "name": "project_id"},
+                        {"value": "USERID", "name": "USERID"}
+                    ]
+                }
+            ]
+        }
+    ],
+    "project-settings": [
+        {
+            "key": "contact-admin-button-remove-suggest-new-feature-project",
+            "name": "Remove the 'Suggest a New Feature' link",
+            "type": "checkbox"
+        },
+        {
+            "key": "contact-admin-button-hide-project",
+            "name": "Hide the 'Contact REDCap admin' button entirely",
+            "type": "checkbox"
+        },
+        {
+            "key": "contact-admin-button-override-project",
+            "name": "Override system settings:<br>Check this to override the system settings. When any settings are left blank, the system settings will be used",
+            "type": "checkbox"
+        },
+        {
+            "key": "contact-admin-button-url-key-project",
+            "name": "Base URL",
+            "type": "text"
+        },
+        {
+            "key": "contact-admin-button-label-project",
+            "name": "Button label",
+            "type": "text"
+        },
+        {
+            "key": "contact-admin-button-sametab-project",
+            "name": "By default, links open in a new tab. Check this to open the link within the same tab",
+            "type": "checkbox"
+        },
+        {
+            "key": "contact-admin-button-descriptive-text-project",
+            "name": "Please make sure you provide both a parameter name and a value.",
+            "type": "descriptive"
+        },
+        {
+            "key": "contact-admin-button-parameters-list-key-project",
+            "name": "URL parameter name-value pairs",
+            "type": "sub_settings",
+            "repeatable": "true",
+            "sub_settings": [
+                {
+                    "key": "contact-admin-button-parameter-name-project",
+                    "name": "Name",
+                    "type": "text"
+                },
+                {
+                    "key": "contact-admin-button-parameter-value-project",
                     "name": "Value",
                     "type": "dropdown",
                     "choices":
