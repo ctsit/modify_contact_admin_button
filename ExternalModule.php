@@ -13,7 +13,7 @@ use ExternalModules\AbstractExternalModule;
  */
 class ExternalModule extends AbstractExternalModule {
 
-    function redcap_module_configure_button_display($project_id) {
+    function redcap_module_configure_button_display($project_id = null) {
         // Only super users may configure on the project level.
         return SUPER_USER == 1 ? true : null;
     }
