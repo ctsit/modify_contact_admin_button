@@ -15,7 +15,7 @@ class ExternalModule extends AbstractExternalModule {
 
     function redcap_module_configure_button_display($project_id = null) {
         // Only super users may configure on the project level.
-        return SUPER_USER == 1 ? true : null;
+        return defined("SUPER_USER") && SUPER_USER == 1 ? true : null;
     }
 
     /**
@@ -57,7 +57,7 @@ class ExternalModule extends AbstractExternalModule {
                     "user_lastname" => $user_lastname,
                     "user_email" => $user_email,
                     "project_id" => $project_id,
-                    "USERID" => USERID,
+                    "USERID" => defined("USERID") ? USERID: "",
             ];
 
             // Build URL.
