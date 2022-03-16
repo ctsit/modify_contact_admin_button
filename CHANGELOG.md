@@ -3,10 +3,6 @@
 All notable changes to the Modify Contact Admin Button project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [2.1.1] - 2022-03-07
-### Changed
-- PHP8 compatibility fixes (GR)
-
 ## [2.1.0] - 2020-02-24
 ### Changed
 - Remove old authors from config.json and update description (Philip Chase)
