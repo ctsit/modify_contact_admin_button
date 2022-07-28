@@ -28,6 +28,8 @@ The `USERID` field contains the redcap username.
 
 Settings on the system-level can be overridden for specific projects by super users only.
 
+Additional Contact REDCap Admininistrator link at the top of project pages (introduced in REDCap v12.3.1) can also be modified with a system-wide setting, which can also be overridden at the project level.
+
 In addition, the label of the 'Contact REDCap administrator' button can be changed, and the button can be removed entirely. Furthermore, the 'Suggest a New Feature' link can be removed for specific projects.
 
 ## Example
