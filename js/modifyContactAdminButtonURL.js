@@ -7,9 +7,9 @@ $('document').ready(function() {
         if (!contactAdminButtonSettings.sameTab) button.attr('target', '_blank')
         if (contactAdminButtonSettings.label.length > 0) button.html(contactAdminButtonSettings.label)
         if (contactAdminButtonSettings.hide) button.parent().hide()
-        if (contactAdminButtonSettings.removeSuggest) {
-            let suggestLink = $('#help_panel a[href*="enduser_survey"]')
-            if (suggestLink.length === 1) suggestLink.parent().hide()
-        }
+    }
+    if (contactAdminButtonSettings.removeSuggest) {
+        let suggestLink = $('#help_panel a[href*="enduser_survey"]')
+        if (suggestLink.length === 1) suggestLink.parent().hide()
     }
 })
