@@ -13,9 +13,9 @@ use ExternalModules\AbstractExternalModule;
  */
 class ExternalModule extends AbstractExternalModule {
 
-    function redcap_module_configure_button_display($project_id) {
+    function redcap_module_configure_button_display($project_id = null) {
         // Only super users may configure on the project level.
-        return SUPER_USER == 1 ? true : null;
+        return defined("SUPER_USER") && SUPER_USER == 1 ? true : null;
     }
 
     /**
@@ -32,6 +32,7 @@ class ExternalModule extends AbstractExternalModule {
             $same_tab = false;
             $remove_suggest_link = $this->getProjectSetting('contact-admin-button-remove-suggest-new-feature-project');
             $hide = $this->getProjectSetting('contact-admin-button-hide-project');
+            $topLink = $this->getProjectSetting('contact-admin-button-modify-toplink');
 
             if($this->getProjectSetting('contact-admin-button-override-project')) {
                 // Use project overrides.
@@ -41,6 +42,7 @@ class ExternalModule extends AbstractExternalModule {
                 $parameter_values = $this->getProjectSetting('contact-admin-button-parameter-value-project');
                 $label = $this->getProjectSetting('contact-admin-button-label-project');
                 $same_tab = $this->getProjectSetting('contact-admin-button-sametab-project');
+                $topLink = $this->getProjectSetting('contact-admin-button-modify-toplink-project');
             }
             if (!strlen($url)) {
                 $url = $this->getSystemSetting('contact-admin-button-url-key');
@@ -57,7 +59,7 @@ class ExternalModule extends AbstractExternalModule {
                     "user_lastname" => $user_lastname,
                     "user_email" => $user_email,
                     "project_id" => $project_id,
-                    "USERID" => USERID,
+                    "USERID" => defined("USERID") ? USERID: "",
             ];
 
             // Build URL.
@@ -75,6 +77,7 @@ class ExternalModule extends AbstractExternalModule {
                 "sameTab" => $same_tab,
                 "hide" => $hide,
                 "removeSuggest" => $remove_suggest_link,
+                "topLink" => $topLink,
             );
             $this->sendVarToJS('contactAdminButtonSettings', $contactAdminButtonSettings);
             $this->includeJs('js/modifyContactAdminButtonURL.js');
