@@ -65,8 +65,12 @@ class ExternalModule extends AbstractExternalModule {
             // Build URL.
             for($i = 0; $i < $length; $i++){
                 if ($parameter_names[$i] and $parameter_values[$i]){
-                    $url .= '&' . filter_var($parameter_names[$i], FILTER_SANITIZE_URL) . 
-                            '=' . $settings[$parameter_values[$i]];
+                    $query = parse_url($url, PHP_URL_QUERY);
+                    if ($query) {
+                        $url .= '&' . filter_var($parameter_names[$i], FILTER_SANITIZE_URL) . '=' . $settings[$parameter_values[$i]];
+                    } else {
+                        $url .= '?' . filter_var($parameter_names[$i], FILTER_SANITIZE_URL) . '=' . $settings[$parameter_values[$i]];
+                    }
                 }
             }
 
