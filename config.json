@@ -35,6 +35,11 @@
             "type": "text"
         },
         {
+            "key": "contact-admin-button-modify-toplink",
+            "name": "Also modify Contact Admin link at top of project page",
+            "type": "checkbox"
+        },
+        {
             "key": "contact-admin-button-descriptive-text",
             "name": "Please make sure you provide both a parameter name and a value.",
             "type": "descriptive"
@@ -80,6 +85,11 @@
         {
             "key": "contact-admin-button-override-project",
             "name": "Override system settings:<br>Check this to override the system settings. When any settings are left blank, the system settings will be used",
+            "type": "checkbox"
+        },
+        {
+            "key": "contact-admin-button-modify-toplink-project",
+            "name": "Also modify Contact Admin link at top of project page",
             "type": "checkbox"
         },
         {

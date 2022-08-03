@@ -32,6 +32,7 @@ class ExternalModule extends AbstractExternalModule {
             $same_tab = false;
             $remove_suggest_link = $this->getProjectSetting('contact-admin-button-remove-suggest-new-feature-project');
             $hide = $this->getProjectSetting('contact-admin-button-hide-project');
+            $topLink = $this->getProjectSetting('contact-admin-button-modify-toplink');
 
             if($this->getProjectSetting('contact-admin-button-override-project')) {
                 // Use project overrides.
@@ -41,6 +42,7 @@ class ExternalModule extends AbstractExternalModule {
                 $parameter_values = $this->getProjectSetting('contact-admin-button-parameter-value-project');
                 $label = $this->getProjectSetting('contact-admin-button-label-project');
                 $same_tab = $this->getProjectSetting('contact-admin-button-sametab-project');
+                $topLink = $this->getProjectSetting('contact-admin-button-modify-toplink-project');
             }
             if (!strlen($url)) {
                 $url = $this->getSystemSetting('contact-admin-button-url-key');
@@ -63,8 +65,12 @@ class ExternalModule extends AbstractExternalModule {
             // Build URL.
             for($i = 0; $i < $length; $i++){
                 if ($parameter_names[$i] and $parameter_values[$i]){
-                    $url .= '&' . filter_var($parameter_names[$i], FILTER_SANITIZE_URL) . 
-                            '=' . $settings[$parameter_values[$i]];
+                    $query = parse_url($url, PHP_URL_QUERY);
+                    if ($query) {
+                        $url .= '&' . filter_var($parameter_names[$i], FILTER_SANITIZE_URL) . '=' . $settings[$parameter_values[$i]];
+                    } else {
+                        $url .= '?' . filter_var($parameter_names[$i], FILTER_SANITIZE_URL) . '=' . $settings[$parameter_values[$i]];
+                    }
                 }
             }
 
@@ -75,6 +81,7 @@ class ExternalModule extends AbstractExternalModule {
                 "sameTab" => $same_tab,
                 "hide" => $hide,
                 "removeSuggest" => $remove_suggest_link,
+                "topLink" => $topLink,
             );
             $this->sendVarToJS('contactAdminButtonSettings', $contactAdminButtonSettings);
             $this->includeJs('js/modifyContactAdminButtonURL.js');
