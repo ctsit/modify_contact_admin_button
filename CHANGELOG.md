@@ -3,6 +3,15 @@
 All notable changes to the Modify Contact Admin Button project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.0] - 2022-08-03
+### Changed
+- Tests for existing URL query before building new URL (Aidan Wilson)
+- PHP8 compatibility (Gunther Rezniczek)
+
+### Added
+- Add config option to also target secondary link at top of sidebar in REDCap v12.3.1 (Aidan Wilson)
+
+
 ## [2.1.0] - 2020-02-24
 ### Changed
 - Remove old authors from config.json and update description (Philip Chase)
